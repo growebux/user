@@ -15,16 +15,18 @@ const App = () =>{
         setListOfPeople(newList);
     }
     return(
+        <div>
         <ul>
             {People.map((item) => (
             <li key={item.id}>
-          <span>{item.age}</span>
-          <span>{item.name}</span>
-          <span>{item.nationality}</span>
+          <p><strong>Name: </strong>{item.name}</p>
+          <p><strong>Age: </strong>{item.age}</p>
+          <p><strong>Nationality: </strong>{item.nationality}</p>
           <button type="button" onClick={() => handleRemoveUser(item.id)}>Delete User</button>
         </li>
       ))}
         </ul>
+        </div>
     );
 };
 
